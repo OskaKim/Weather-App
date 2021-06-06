@@ -3,6 +3,9 @@ import {Alert} from 'react-native';
 import Loading from './Loading';
 import * as Location from 'expo-location';
 
+// https://home.openweathermap.org/api_keys
+const API_KEY = "125dcfdaf3aafea1b4ff50185c299681";
+
 export default class extends React.Component {
   state = {
     isLoading: true
