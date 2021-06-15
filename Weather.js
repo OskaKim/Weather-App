@@ -5,45 +5,45 @@ import { MaterialCommunityIcons } from '@expo/vector-icons'
 import { LinearGradient } from 'expo-linear-gradient'
 
 const weatherOption = {
-  Thunderstorm: { // todo
-    iconName: 'weather-cloudy',
-    gradient: ['#DAE2F8', '#FFFFFF']
+  Thunderstorm: {
+    iconName: 'weather-lightning-rainy',
+    gradient: ['#C04848', '#480048']
   },
-  Drizzle: { // todo
-    iconName: 'weather-cloudy',
-    gradient: ['#DAE2F8', '#FFFFFF']
+  Drizzle: {
+    iconName: 'weather-rainy',
+    gradient: ['#4b6cb7', '#182848']
   },
-  Rain: { // todo
-    iconName: 'weather-cloudy',
-    gradient: ['#DAE2F8', '#FFFFFF']
+  Rain: {
+    iconName: 'weather-pouring',
+    gradient: ['#485563', '#29323c']
   },
-  Snow: { // todo
-    iconName: 'weather-cloudy',
-    gradient: ['#DAE2F8', '#FFFFFF']
+  Snow: {
+    iconName: 'weather-snowy-heavy',
+    gradient: ['#83a4d4', '#b6fbff']
   },
-  Atmosphere: { // todo
-    iconName: 'weather-cloudy',
-    gradient: ['#DAE2F8', '#FFFFFF']
+  Atmosphere: {
+    iconName: 'weather-fog',
+    gradient: ['#fe8c00', '#f83600']
   },
-  Clear: { // todo
-    iconName: 'weather-cloudy',
-    gradient: ['#DAE2F8', '#FFFFFF']
+  Clear: {
+    iconName: 'weather-sunny',
+    gradient: ['#70e1f5', '#ffd194']
   },
   Clouds: {
     iconName: 'weather-cloudy',
     gradient: ['#DAE2F8', '#FFFFFF']
   },
   Haze: {
-    iconName: 'weather-fog',
+    iconName: 'weather-hazy',
     gradient: ['#EFEFBB', '#D4D3DD']
   },
-  Mist: { // todo
-    iconName: 'weather-cloudy',
-    gradient: ['#DAE2F8', '#FFFFFF']
+  Mist: {
+    iconName: 'weather-fog',
+    gradient: ['#FFEEEE', '#D4D3DD']
   },
-  Dust: { // todo
-    iconName: 'weather-cloudy',
-    gradient: ['#DAE2F8', '#FFFFFF']
+  Dust: {
+    iconName: 'weather-fog',
+    gradient: ['#DE6262', '#FFB88C']
   }
 }
 
