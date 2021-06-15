@@ -1,34 +1,43 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, StatusBar } from 'react-native'
 import PropTypes from 'prop-types'
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { MaterialCommunityIcons } from '@expo/vector-icons'
+import { LinearGradient } from 'expo-linear-gradient'
 
 export default function Weather ({ temp }) {
   return (
-    <View style={styles.container}>
+    <LinearGradient
+      colors={['#4c669f', '#3b5998', '#192f6a']}
+      style={styles.container}
+    >
+      <StatusBar barStyle='light-content' />
       <View style={styles.halfContainer}>
-        <MaterialCommunityIcons size={96} name="weather-lightning-rainy" />
+        <MaterialCommunityIcons
+          color='white'
+          size={96}
+          name='weather-lightning-rainy'
+        />
         <Text style={styles.temp}>{temp}o</Text>
       </View>
       <View style={styles.halfContainer} />
-    </View>
+    </LinearGradient>
   )
 }
 
 Weather.propTypes = {
-    temp: PropTypes.number.isRequired,
-    condition: PropTypes.oneOf([
-      "Thunderstorm",
-      "Drizzle",
-      "Rain",
-      "Snow",
-      "Atmosphere",
-      "Clear",
-      "Clouds",
-      "Haze",
-      "Mist",
-      "Dust"
-    ]).isRequired
+  temp: PropTypes.number.isRequired,
+  condition: PropTypes.oneOf([
+    'Thunderstorm',
+    'Drizzle',
+    'Rain',
+    'Snow',
+    'Atmosphere',
+    'Clear',
+    'Clouds',
+    'Haze',
+    'Mist',
+    'Dust'
+  ]).isRequired
 }
 
 const styles = StyleSheet.create({
@@ -38,11 +47,12 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   temp: {
-    fontSize: 42
+    fontSize: 42,
+    color: 'white'
   },
   halfContainer: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center"
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 })
