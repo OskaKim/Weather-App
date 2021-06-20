@@ -7,43 +7,63 @@ import { LinearGradient } from 'expo-linear-gradient'
 const weatherOption = {
   Thunderstorm: {
     iconName: 'weather-lightning-rainy',
-    gradient: ['#C04848', '#480048']
+    gradient: ['#C04848', '#480048'],
+    title: "thunderstorm",
+    subtitle: '천둥번개'
   },
   Drizzle: {
     iconName: 'weather-rainy',
-    gradient: ['#4b6cb7', '#182848']
+    gradient: ['#4b6cb7', '#182848'],
+    title: "drizzle",
+    subtitle: '보슬비'
   },
   Rain: {
     iconName: 'weather-pouring',
-    gradient: ['#485563', '#29323c']
+    gradient: ['#485563', '#29323c'],
+    title: "rain",
+    subtitle: '비'
   },
   Snow: {
     iconName: 'weather-snowy-heavy',
-    gradient: ['#83a4d4', '#b6fbff']
+    gradient: ['#83a4d4', '#b6fbff'],
+    title: "snow",
+    subtitle: '눈'
   },
   Atmosphere: {
     iconName: 'weather-fog',
-    gradient: ['#fe8c00', '#f83600']
+    gradient: ['#fe8c00', '#f83600'],
+    title: "atmosphere",
+    subtitle: '자욱한 안개'
   },
   Clear: {
     iconName: 'weather-sunny',
-    gradient: ['#70e1f5', '#ffd194']
+    gradient: ['#70e1f5', '#ffd194'],
+    title: "Clear",
+    subtitle: '맑음'
   },
   Clouds: {
     iconName: 'weather-cloudy',
-    gradient: ['#DAE2F8', '#FFFFFF']
+    gradient: ['#DAE2F8', '#FFFFFF'],
+    title: "Clouds",
+    subtitle: '구름'
   },
   Haze: {
     iconName: 'weather-hazy',
-    gradient: ['#EFEFBB', '#D4D3DD']
+    gradient: ['#EFEFBB', '#D4D3DD'],
+    title: "Haze",
+    subtitle: '실안개'
   },
   Mist: {
     iconName: 'weather-fog',
-    gradient: ['#FFEEEE', '#D4D3DD']
+    gradient: ['#FFEEEE', '#D4D3DD'],
+    title: "mist",
+    subtitle: '안개 주의'
   },
   Dust: {
     iconName: 'weather-fog',
-    gradient: ['#DE6262', '#FFB88C']
+    gradient: ['#DE6262', '#FFB88C'],
+    title: "dust",
+    subtitle: "미세먼지 주의"
   }
 }
 
@@ -60,9 +80,12 @@ export default function Weather ({ temp, condition }) {
           size={96}
           name={weatherOption[condition].iconName}
         />
-        <Text style={styles.temp}>{temp}o</Text>
+        <Text style={styles.temp}>{temp}°</Text>
       </View>
-      <View style={styles.halfContainer} />
+      <View style={{...styles.halfContainer, ...styles.textContainer }}>
+        <Text style={styles.title}>{weatherOption[condition].title}</Text>
+        <Text style={styles.subtitle}>{weatherOption[condition].subtitle}</Text>
+      </View>
     </LinearGradient>
   )
 }
@@ -97,5 +120,20 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center'
+  },
+  title: {
+    color: 'white',
+    fontSize: 54,
+    fontWeight: '300',
+    marginBottom: 10,
+  },
+  subtitle: {
+    color: 'white',
+    fontWeight: '600',
+    fontSize: 24
+  },
+  textContainer: {
+      paddingHorizontal: 20,
+      alignItems: "flex-start"
   }
 })
